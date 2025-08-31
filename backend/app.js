@@ -51,6 +51,7 @@ app.put('/user-places', async(req, res) => {
 // 404
 app.use((req, res, next) => {
     if (req.method === 'OPTIONS') {
+        
         return next();
     }
     res
