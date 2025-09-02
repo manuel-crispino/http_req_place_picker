@@ -41,7 +41,7 @@ app.get('/user-places', async(req, res) => {
 app.put('/user-places', async(req, res) => {
     const places = req.body.places;
 
-    await fs.writeFile('./data/user-places.json', JSON.stringify(places));
+    await fs.writeFile('./data/user-places.json', JSON.stringify(places,null,2));
 
     res
         .status(200)
